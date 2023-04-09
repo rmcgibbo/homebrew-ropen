@@ -13,4 +13,10 @@ class Ropen < Formula
   test do
     system "#{bin}/ropen", "-h"
   end
+
+  service do
+    run [opt_bin/"server"]
+    keep_alive true
+  end
+
 end
